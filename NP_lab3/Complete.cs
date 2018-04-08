@@ -12,7 +12,7 @@ namespace NP_lab3
 {
     public class Complete
     {
-       public static string[] CompleteWordAsync(string input, string predictorKey, string lang, int limit)
+        public static string[] CompleteWordAsync(string input, string predictorKey, string lang, int limit)
         {
             input = WebUtility.HtmlEncode(input);
 
@@ -28,7 +28,7 @@ namespace NP_lab3
 
             var reader = new StreamReader(respose.GetResponseStream());
 
-            var poolString =  reader.ReadToEnd();
+            var poolString = reader.ReadToEnd();
 
             var responseJson = parser.Parse(poolString);
 
@@ -38,7 +38,7 @@ namespace NP_lab3
 
         }
 
-       static string[] ToStringArray(JSONArrayCollection arrayCollection)
+        static string[] ToStringArray(JSONArrayCollection arrayCollection)
         {
             var pool = new string[arrayCollection.Count];
 
@@ -51,4 +51,3 @@ namespace NP_lab3
         }
     }
 }
-

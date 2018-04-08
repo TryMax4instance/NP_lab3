@@ -15,16 +15,24 @@ namespace NP_lab3
         public Form1()
         {
             InitializeComponent();
-            var pool = Lang.GetLangs(PredictorKey.Text).ToString();
-            for(int i = 0; i<pool.Length; i++)
+
+           // PredictorLangs.Items.Add("ru");
+
+            string[] kek;
+            kek = Lang.GetLangs(PredictorKey.Text);
+
+            PredictorLangs.BeginUpdate();
+
+            for (int i = 0; i < kek.Length; i++)
             {
-               PredictorLangs.Items.AddRange(pool[i]);
+                PredictorLangs.Items.Add(kek[i].ToString());
             }
+
+            PredictorLangs.EndUpdate();
         }
 
         private void Predict_Click(object sender, EventArgs e)
         {
-            string n = "";
             string key = PredictorKey.Text;
             string k = Lang.GetLangs(key).ToString();
             string[] b = Complete.CompleteWordAsync(PredictorInput.Text, key, PredictorLangs.Text, Convert.ToInt32(PredictorLimit.Text));

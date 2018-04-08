@@ -12,9 +12,8 @@ namespace NP_lab3
 {
     public static class Lang
     {
-       public static string[] GetLangs(string predictorKey)
+        public static string[] GetLangs(string predictorKey)
         {
-
             var parser = new JSONParser.JSONParser();
 
             var requestString =
@@ -31,10 +30,9 @@ namespace NP_lab3
 
             var responseJson = parser.Parse(poolString);
 
-            var textArray = ((JSONObjectCollection)responseJson)["text"] as JSONArrayCollection;
+            var textArray = ((JSONArrayCollection)responseJson);
 
             return ToStringArray(textArray);
-
         }
 
         public static string[] ToStringArray(JSONArrayCollection arrayCollection)
