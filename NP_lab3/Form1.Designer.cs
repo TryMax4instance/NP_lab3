@@ -67,11 +67,11 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(4, 41);
+            this.label32.Location = new System.Drawing.Point(5, 41);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(68, 13);
+            this.label32.Size = new System.Drawing.Size(28, 13);
             this.label32.TabIndex = 42;
-            this.label32.Text = "Кол-во слов";
+            this.label32.Text = "Limit";
             // 
             // label28
             // 
