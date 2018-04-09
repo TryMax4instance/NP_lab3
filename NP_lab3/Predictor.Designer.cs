@@ -1,6 +1,6 @@
 ﻿namespace NP_lab3
 {
-    partial class Form1
+    partial class Predictor
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -194,7 +194,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PredictorLangs);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Predictor";
             this.ResumeLayout(false);
             this.PerformLayout();
 
